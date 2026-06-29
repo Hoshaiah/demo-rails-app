@@ -5,10 +5,11 @@ pipelines defined in [`demo-iac`](../demo-iac).
 
 ## Endpoints
 
-| Method | Path     | Returns                                   |
-| ------ | -------- | ----------------------------------------- |
-| GET    | /health  | `{"status":"ok","time":"<iso8601>"}`      |
-| GET    | /echo    | `{"message":"<message query param>"}`     |
+| Method | Path     | Returns                                                       |
+| ------ | -------- | ------------------------------------------------------------- |
+| GET    | /health  | `{"status":"ok","time":"<iso8601>"}`                          |
+| GET    | /echo    | `{"message":"<message query param>"}`                         |
+| GET    | /version | `{"app":"demo-rails-app","rails":"7.1.x","ruby":"3.x.x"}`     |
 
 ## Run locally
 
