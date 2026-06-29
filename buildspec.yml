@@ -1,0 +1,21 @@
+# Runs in the demo-iac code-review CodeBuild project on every PR against main.
+# Keep it boring: install deps, run the test suite. If anything fails, the PR
+# gets a red X status check.
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      ruby: 3.3
+    commands:
+      - gem install bundler --conservative
+      - bundle config set --local path 'vendor/bundle'
+      - bundle install --jobs 4 --retry 3
+
+  build:
+    commands:
+      - bin/rails test
+
+cache:
+  paths:
+    - vendor/bundle/**/*

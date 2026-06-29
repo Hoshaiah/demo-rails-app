@@ -1,0 +1,10 @@
+/.bundle
+/log/*
+!/log/.keep
+/tmp/*
+!/tmp/.keep
+/storage/*
+!/storage/.keep
+
+# Ignore master key for decrypting credentials (if/when added).
+/config/master.key
